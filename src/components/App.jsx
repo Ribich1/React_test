@@ -120,7 +120,7 @@ class App extends Component {
           Открыть модалку
         </button>
         {showModal && (
-          <Modal>
+          <Modal onClose={this.toggleModal}>
             <h1>Привет, это контент модалки как children</h1>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
