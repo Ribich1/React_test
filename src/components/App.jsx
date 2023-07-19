@@ -116,7 +116,7 @@ class App extends Component {
 
     return (
       <>
-        <button type="button" onClick={this.toggleModal}>
+        <button type="button" onClick={this.toggleModal()}>
           Открыть модалку
         </button>
         {showModal && (
