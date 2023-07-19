@@ -5,6 +5,8 @@ import TodoEditor from './TodoEditor';
 import { nanoid } from 'nanoid';
 import Filter from './Filter/Filter';
 import Modal from './Modal';
+import Tabs from './Tabs/Tabs';
+import tabs from './tabs.json'
 
 // import ColorPicker from './Counter/ColorPicker';
 // import Counter from './Counter/Counter';
@@ -107,6 +109,9 @@ class App extends Component {
       showModal: !showModal,
     }));
   };
+  // closeModal = () => {
+  //   this.setState({ showModal: false });
+  // };
 
   render() {
     const { todos, filter, showModal } = this.state;
@@ -116,6 +121,7 @@ class App extends Component {
 
     return (
       <>
+      <Tabs items={tabs}/>
         <button type="button" onClick={this.toggleModal}>
           Открыть модалку
         </button>
